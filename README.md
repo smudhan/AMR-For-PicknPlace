@@ -167,9 +167,11 @@ AMR
 The robot will autonomously plan and navigate to the selected goal while using the LiDAR for obstacle detection.
 
 📌 Launch File Summary
+```text
 Launch file	            Purpose
 display.launch.py	      Display the robot model in RViz
 gazebo.launch.py	      Start Gazebo and the AMR simulation
 slam.launch.py        	Build a map using SLAM Toolbox
 localization.launch.py	Localize the robot using AMCL
 nav2.launch.py	        Start autonomous navigation
+```
