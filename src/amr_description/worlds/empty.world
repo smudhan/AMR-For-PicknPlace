@@ -1,0 +1,527 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+    <world name="amr_world">
+        <include>
+            <uri>model://sun</uri>
+        </include>
+        <include>
+            <uri>model://ground_plane</uri>
+        </include>
+
+        <model name="wall_north">
+            <static>true</static>
+            <pose>0 10 1</pose>
+            <link name="link">
+                <collision name="collision">
+                    <geometry>
+                        <box>
+                            <size>20 0.20 2</size>
+                        </box>
+                    </geometry>
+                </collision>
+                <visual name="visual">
+                    <geometry>
+                        <box>
+                            <size>20 0.20 2</size>
+                        </box>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+
+        <model name="wall_south">
+            <static>true</static>
+            <pose>0 -10 1</pose>
+            <link name="link">
+                <collision name="collision">
+                    <geometry>
+                        <box>
+                            <size>20 0.20 2</size>
+                        </box>
+                    </geometry>
+                </collision>
+                <visual name="visual">
+                    <geometry>
+                        <box>
+                            <size>20 0.20 2</size>
+                        </box>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+
+        <model name="wall_east">
+            <static>true</static>
+            <pose>10 0 1</pose>
+            <link name="link">
+                <collision name="collision">
+                    <geometry>
+                        <box>
+                            <size>0.20 20 2</size>
+                        </box>
+                    </geometry>
+                </collision>
+                <visual name="visual">
+                    <geometry>
+                        <box>
+                            <size>0.20 20 2</size>
+                        </box>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+
+        <model name="wall_west">
+            <static>true</static>
+            <pose>-10 0 1</pose>
+            <link name="link">
+                <collision name="collision">
+                    <geometry>
+                        <box>
+                            <size>0.20 20 2</size>
+                        </box>
+                    </geometry>
+                </collision>
+                <visual name="visual">
+                    <geometry>
+                        <box>
+                            <size>0.20 20 2</size>
+                        </box>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+
+        <model name="obstacle_1">
+            <static>true</static>
+            <pose>2 3 0.5</pose>
+            <link name="link">
+                <collision name="collision">
+                    <geometry>
+                        <box>
+                            <size>4 2 1</size>
+                        </box>
+                    </geometry>
+                </collision>
+                <visual name="visual">
+                    <geometry>
+                        <box>
+                            <size>4 2 1</size>
+                        </box>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+
+        <model name="obstacle_2">
+            <static>true</static>
+            <pose>-4 -5 0.5</pose>
+            <link name="link">
+                <collision name="collision">
+                    <geometry>
+                        <box>
+                            <size>2 10 1</size>
+                        </box>
+                    </geometry>
+                </collision>
+                <visual name="visual">
+                    <geometry>
+                        <box>
+                            <size>2 10 1</size>
+                        </box>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+
+        <model name="obstacle_3">
+            <static>true</static>
+            <pose>5 -7 0.5</pose>
+            <link name="link">
+                <collision name="collision">
+                    <geometry>
+                        <box>
+                            <size>4 2 1</size>
+                        </box>
+                    </geometry>
+                </collision>
+                <visual name="visual">
+                    <geometry>
+                        <box>
+                            <size>4 2 1</size>
+                        </box>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+
+        <model name="obstacle_4">
+            <static>true</static>
+            <pose>-5 7 0.5</pose>
+            <link name="link">
+                <collision name="collision">
+                    <geometry>
+                        <box>
+                            <size>4 2 1</size>
+                        </box>
+                    </geometry>
+                </collision>
+                <visual name="visual">
+                    <geometry>
+                        <box>
+                            <size>4 2 1</size>
+                        </box>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+
+        <model name="obstacle_5">
+            <static>true</static>
+            <pose>-8 -7 0.5</pose>
+            <link name="link">
+                <collision name="collision">
+                    <geometry>
+                        <box>
+                            <size>2 1 crystalline 1</size>
+                        </box>
+                    </geometry>
+                </collision>
+                <visual name="visual">
+                    <geometry>
+                        <box>
+                            <size>2 1 1</size>
+                        </box>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+
+        <model name='Construction Cone'>
+            <pose>-8.23473 -3.07484 0 0 0 0</pose>
+            <link name='link'>
+                <inertial>
+                    <mass>1</mass>
+                    <inertia>
+                        <ixx>1</ixx>
+                        <ixy>0</ixy>
+                        <ixz>0</ixz>
+                        <iyy>1</iyy>
+                        <iyz>0</iyz>
+                        <izz>1</izz>
+                    </inertia>
+                </inertial>
+                <collision name='collision'>
+                    <geometry>
+                        <mesh>
+                            <scale>10 10 10</scale>
+                            <uri>model://construction_cone/meshes/construction_cone.dae</uri>
+                        </mesh>
+                    </geometry>
+                </collision>
+                <visual name='visual'>
+                    <geometry>
+                        <mesh>
+                            <scale>10 10 10</scale>
+                            <uri>model://construction_cone/meshes/construction_cone.dae</uri>
+                        </mesh>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+
+        <model name='Construction Cone_0'>
+            <pose>5.3479 2.23626 0 0 0 0</pose>
+            <link name='link'>
+                <inertial>
+                    <mass>1</mass>
+                    <inertia>
+                        <ixx>1</ixx>
+                        <ixy>0</ixy>
+                        <ixz>0</ixz>
+                        <iyy>1</iyy>
+                        <iyz>0</iyz>
+                        <izz>1</izz>
+                    </inertia>
+                </inertial>
+                <collision name='collision'>
+                    <geometry>
+                        <mesh>
+                            <scale>10 10 10</scale>
+                            <uri>model://construction_cone/meshes/construction_cone.dae</uri>
+                        </mesh>
+                    </geometry>
+                </collision>
+                <visual name='visual'>
+                    <geometry>
+                        <mesh>
+                            <scale>10 10 10</scale>
+                            <uri>model://construction_cone/meshes/construction_cone.dae</uri>
+                        </mesh>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+
+        <model name='Construction Cone_1'>
+            <pose>8.04256 2.29711 0 0 0 0</pose>
+            <link name='link'>
+                <inertial>
+                    <mass>1</mass>
+                    <inertia>
+                        <ixx>1</ixx>
+                        <ixy>0</ixy>
+                        <ixz>0</ixz>
+                        <iyy>1</iyy>
+                        <iyz>0</iyz>
+                        <izz>1</izz>
+                    </inertia>
+                </inertial>
+                <collision name='collision'>
+                    <geometry>
+                        <mesh>
+                            <scale>10 10 10</scale>
+                            <uri>model://construction_cone/meshes/construction_cone.dae</uri>
+                        </mesh>
+                    </geometry>
+                </collision>
+                <visual name='visual'>
+                    <geometry>
+                        <mesh>
+                            <scale>10 10 10</scale>
+                            <uri>model://construction_cone/meshes/construction_cone.dae</uri>
+                        </mesh>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+
+        <model name='Construction Cone_2'>
+            <pose>0.170262 7.8787 0 0 0 0</pose>
+            <link name='link'>
+                <inertial>
+                    <mass>1</mass>
+                    <inertia>
+                        <ixx>1</ixx>
+                        <ixy>0</ixy>
+                        <ixz>0</ixz>
+                        <iyy>1</iyy>
+                        <iyz>0</iyz>
+                        <izz>1</izz>
+                    </inertia>
+                </inertial>
+                <collision name='collision'>
+                    <geometry>
+                        <mesh>
+                            <scale>10 10 10</scale>
+                            <uri>model://construction_cone/meshes/construction_cone.dae</uri>
+                        </mesh>
+                    </geometry>
+                </collision>
+                <visual name='visual'>
+                    <geometry>
+                        <mesh>
+                            <scale>10 10 10</scale>
+                            <uri>model://construction_cone/meshes/construction_cone.dae</uri>
+                        </mesh>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+
+        <model name='Construction Cone_3'>
+            <pose>-1.8432 8.9577 0 0 0 0</pose>
+            <link name='link'>
+                <inertial>
+                    <mass>1</mass>
+                    <inertia>
+                        <ixx>1</ixx>
+                        <ixy>0</ixy>
+                        <ixz>0</ixz>
+                        <iyy>1</iyy>
+                        <iyz>0</iyz>
+                        <izz>1</izz>
+                    </inertia>
+                </inertial>
+                <collision name='collision'>
+                    <geometry>
+                        <mesh>
+                            <scale>10 10 10</scale>
+                            <uri>model://construction_cone/meshes/construction_cone.dae</uri>
+                        </mesh>
+                    </geometry>
+                </collision>
+                <visual name='visual'>
+                    <geometry>
+                        <mesh>
+                            <scale>10 10 10</scale>
+                            <uri>model://construction_cone/meshes/construction_cone.dae</uri>
+                        </mesh>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+
+        <model name='Construction Cone_4'>
+            <pose>-1.49359 -7.01287 0 0 0 0</pose>
+            <link name='link'>
+                <inertial>
+                    <mass>1</mass>
+                    <inertia>
+                        <ixx>1</ixx>
+                        <ixy>0</ixy>
+                        <ixz>0</ixz>
+                        <iyy>1</iyy>
+                        <iyz>0</iyz>
+                        <izz>1</izz>
+                    </inertia>
+                </inertial>
+                <collision name='collision'>
+                    <geometry>
+                        <mesh>
+                            <scale>10 10 10</scale>
+                            <uri>model://construction_cone/meshes/construction_cone.dae</uri>
+                        </mesh>
+                    </geometry>
+                </collision>
+                <visual name='visual'>
+                    <geometry>
+                        <mesh>
+                            <scale>10 10 10</scale>
+                            <uri>model://construction_cone/meshes/construction_cone.dae</uri>
+                        </mesh>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+
+        <model name='Construction Cone_5'>
+            <pose>1.43327 -6.91715 0 0 0 0</pose>
+            <link name='link'>
+                <inertial>
+                    <mass>1</mass>
+                    <inertia>
+                        <ixx>1</ixx>
+                        <ixy>0</ixy>
+                        <ixz>0</ixz>
+                        <iyy>1</iyy>
+                        <iyz>0</iyz>
+                        <izz>1</izz>
+                    </inertia>
+                </inertial>
+                <collision name='collision'>
+                    <geometry>
+                        <mesh>
+                            <scale>10 10 10</scale>
+                            <uri>model://construction_cone/meshes/construction_cone.dae</uri>
+                        </mesh>
+                    </geometry>
+                </collision>
+                <visual name='visual'>
+                    <geometry>
+                        <mesh>
+                            <scale>10 10 10</scale>
+                            <uri>model://construction_cone/meshes/construction_cone.dae</uri>
+                        </mesh>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+
+        <model name='Construction Barrel'>
+            <pose>-0.071383 -3.27816 0 0 0 0</pose>
+            <link name='link'>
+                <inertial>
+                    <pose>0 0 0.4 0 0 0</pose>
+                    <mass>500</mass>
+                    <inertia>
+                        <ixx>51.2096</ixx>
+                        <iyy>51.2096</iyy>
+                        <izz>25</izz>
+                        <ixy>0</ixy>
+                        <ixz>0</ixz>
+                        <iyz>0</iyz>
+                    </inertia>
+                </inertial>
+                <collision name='collision'>
+                    <geometry>
+                        <mesh>
+                            <uri>model://construction_barrel/meshes/construction_barrel.dae</uri>
+                        </mesh>
+                    </geometry>
+                </collision>
+                <visual name='visual'>
+                    <geometry>
+                        <mesh>
+                            <uri>model://construction_barrel/meshes/construction_barrel.dae</uri>
+                        </mesh>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+
+        <model name='Construction Barrel_0'>
+            <pose>8.10707 -3.28573 0 0 0 0</pose>
+            <link name='link'>
+                <inertial>
+                    <pose>0 0 0.4 0 0 0</pose>
+                    <mass>500</mass>
+                    <inertia>
+                        <ixx>51.2096</ixx>
+                        <iyy>51.2096</iyy>
+                        <izz>25</izz>
+                        <ixy>0</ixy>
+                        <ixz>0</ixz>
+                        <iyz>0</iyz>
+                    </inertia>
+                </inertial>
+                <collision name='collision'>
+                    <geometry>
+                        <mesh>
+                            <uri>model://construction_barrel/meshes/construction_barrel.dae</uri>
+                        </mesh>
+                    </geometry>
+                </collision>
+                <visual name='visual'>
+                    <geometry>
+                        <mesh>
+                            <uri>model://construction_barrel/meshes/construction_barrel.dae</uri>
+                        </mesh>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+
+        <model name='Construction Barrel_1'>
+            <pose>-8.23316 1.39625 0 0 0 0</pose>
+            <link name='link'>
+                <inertial>
+                    <pose>0 0 0.4 0 0 0</pose>
+                    <mass>500</mass>
+                    <inertia>
+                        <ixx>51.2096</ixx>
+                        <iyy>51.2096</iyy>
+                        <izz>25</izz>
+                        <ixy>0</ixy>
+                        <ixz>0</ixz>
+                        <iyz>0</iyz>
+                    </inertia>
+                </inertial>
+                <collision name='collision'>
+                    <geometry>
+                        <mesh>
+                            <uri>model://construction_barrel/meshes/construction_barrel.dae</uri>
+                        </mesh>
+                    </geometry>
+                </collision>
+                <visual name='visual'>
+                    <geometry>
+                        <mesh>
+                            <uri>model://construction_barrel/meshes/construction_barrel.dae</uri>
+                        </mesh>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+    </world>
+</sdf>
